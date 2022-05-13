@@ -33,6 +33,7 @@ io.on('connection', (socket) => {
             );
             return callback();
         }
+        
 
         io.to(user.room).emit('message',generateMessage(user.username,message))
         callback('Delivered')
